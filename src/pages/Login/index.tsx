@@ -53,10 +53,9 @@ const Login = () => {
           margin="normal"
           variant="outlined"
           label="Nome de usuário"
-          name="username"
           size="small"
           color="primary"
-          inputRef={register}
+          {...register("username")}
           error={!!errors.username}
           helperText={errors.username?.message}
         ></TextField>
@@ -67,10 +66,9 @@ const Login = () => {
           variant="outlined"
           label="Senha"
           type="password"
-          name="password"
           size="small"
           color="primary"
-          inputRef={register}
+          {...register("password")}
           error={!!errors.password}
           helperText={errors.password?.message}
         ></TextField>
